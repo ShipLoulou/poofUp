@@ -1,0 +1,79 @@
+*::before,
+*::after,
+* {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: initial;
+    text-decoration: initial;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* palette de couleur */
+
+.formule1BackgroundColor0175 {
+    background-color: rgba(220, 20, 60, 0.175);
+}
+
+.formule1BackgroundColor1 {
+    background-color: rgb(220, 20, 60);
+}
+
+.indycarBackgroundColor0175 {
+    background-color: rgba(113, 191, 255, 0.175);
+}
+
+.indycarBackgroundColor1 {
+    background-color: rgb(113, 191, 255);
+}
+
+.wecBackgroundColor0175 {
+    background-color: rgba(36, 185, 53, 0.175);
+}
+
+.wecBackgroundColor1 {
+    background-color: rgb(36, 185, 53);
+}
+
+.wrcBackgroundColor0175 {
+    background-color: rgba(242, 117, 22, 0.175);
+}
+
+.wrcBackgroundColor1 {
+    background-color: rgb(242, 117, 22);
+}
+
+/* home */
+
+.home {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.home div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home div a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.home div a img {
+    width: 30vh;
+}
