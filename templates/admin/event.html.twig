@@ -1,0 +1,55 @@
+{% extends "base.html.twig" %}
+
+{% block header %}
+	{% include "admin/layouts/navBar.html.twig" %}
+{% endblock %}
+
+{% block main %}
+	<section class="adminForm">
+		<h1>Ajouter un evenement</h1>
+		<div class="container">
+			{{ form_start(formView) }}
+
+			{{ form_errors(formView) }}
+
+			<div>
+				{{ form_label(formView.name) }}
+				{{ form_widget(formView.name) }}
+				{{ form_errors(formView.name) }}
+				{{ form_help(formView.name) }}
+			</div>
+			<div>
+				{{ form_label(formView.imageFile) }}
+				{{ form_widget(formView.imageFile) }}
+				{{ form_errors(formView.imageFile) }}
+				{{ form_help(formView.imageFile) }}
+			</div>
+			{{ form_row(formView.startDate) }}
+			{{ form_row(formView.endDate) }}
+			<div>
+				{{ form_label(formView.raceDate) }}
+				{{ form_widget(formView.raceDate) }}
+				{{ form_errors(formView.raceDate) }}
+				{{ form_help(formView.raceDate) }}
+			</div>
+			<div>
+				{{ form_label(formView.category) }}
+				{{ form_widget(formView.category) }}
+				{{ form_errors(formView.category) }}
+				{{ form_help(formView.category) }}
+			</div>
+			<div>
+				{{ form_label(formView.currentSeason) }}
+				{{ form_widget(formView.currentSeason) }}
+				{{ form_errors(formView.currentSeason) }}
+				{{ form_help(formView.currentSeason) }}
+			</div>
+			<button>
+				Enregister l'évènement
+			</button>
+			{{ form_end(formView) }}
+		</div>
+	</section>
+
+	{% include "admin/layouts/card.html.twig" %}
+{% endblock %}

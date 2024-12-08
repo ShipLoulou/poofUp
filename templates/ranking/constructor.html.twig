@@ -1,0 +1,34 @@
+{% extends "base.html.twig" %}
+
+{% block header %}
+	{% include "home/layouts/navBar.html.twig" %}
+{% endblock %}
+
+{% block main %}
+	<div class="returnBox">
+		<a href="{{ path("app_home_category", {'category': category}) }}">
+			<img src="{{ asset('assets/icons/retourner.svg') }}" alt="">
+			retourner au menu
+		</a>
+	</div>
+	<section class="arrayRanking">
+		<div class="container">
+			<table>
+				<thead>
+					<th>Position</th>
+					<th>Pilote</th>
+					<th>Points</th>
+				</thead>
+				<tbody>
+					{% for pilot in arrayConstructors %}
+						<tr>
+							<td>{{ pilot.position }}</td>
+							<td>{{ pilot.fullName }}</td>
+							<td>{{ pilot.seasonTotalPoint }}</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</section>
+{% endblock %}

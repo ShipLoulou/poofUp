@@ -1,0 +1,47 @@
+{% extends "base.html.twig" %}
+
+{% block header %}
+	{% include "admin/layouts/navBar.html.twig" %}
+{% endblock %}
+
+{% block main %}
+	<section class="adminForm">
+		<h1>Ajouter un pilote</h1>
+		<div class="container">
+			{{ form_start(formView) }}
+
+			{{ form_errors(formView) }}
+
+			<div>
+				{{ form_label(formView.fullName) }}
+				{{ form_widget(formView.fullName) }}
+				{{ form_errors(formView.fullName) }}
+				{{ form_help(formView.fullName) }}
+			</div>
+			<div>
+				{{ form_label(formView.seasonTotalPoint) }}
+				{{ form_widget(formView.seasonTotalPoint) }}
+				{{ form_errors(formView.seasonTotalPoint) }}
+				{{ form_help(formView.seasonTotalPoint) }}
+			</div>
+			<div>
+				{{ form_label(formView.category) }}
+				{{ form_widget(formView.category) }}
+				{{ form_errors(formView.category) }}
+				{{ form_help(formView.category) }}
+			</div>
+			<div>
+				{{ form_label(formView.currentSeason) }}
+				{{ form_widget(formView.currentSeason) }}
+				{{ form_errors(formView.currentSeason) }}
+				{{ form_help(formView.currentSeason) }}
+			</div>
+			<button>
+				Enregister le pilote
+			</button>
+			{{ form_end(formView) }}
+		</div>
+	</section>
+
+	{% include "admin/layouts/array.html.twig" %}
+{% endblock %}

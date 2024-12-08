@@ -18,6 +18,15 @@ li {
     list-style-type: none;
 }
 
+body {
+    background-color: #9e9e9e1a;
+}
+
+.btn-link {
+    color: #FFF;
+    padding: 7px 15px;
+}
+
 /* palette de couleur */
 
 .formule1BackgroundColor0175 {
@@ -69,11 +78,409 @@ li {
 }
 
 .home div a {
+    width: 100%;
     height: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .home div a img {
     width: 30vh;
+}
+
+/* navBar home */
+
+.navBarHome .containerImg {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navBarHome .containerImg img {
+    height: 50px;
+}
+
+.navBarHome .containerWrapper {
+    height: 300px;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navBarHome .containerWrapper img {
+    height: 50px;
+    margin: 10px 0;
+}
+
+.navBarHome .closedMenu {
+    height: 0;
+}
+
+/* navBar admin */
+
+.navBarAdmin {
+    background-color: #9e9e9e1a;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBarAdmin ul {
+    display: flex;
+}
+
+.navBarAdmin ul li {
+    font-size: 22px;
+    margin: 0 25px;
+}
+
+.navBarAdmin ul li a {
+    padding: 11px 22px;
+    border-radius: 15px;
+}
+
+.navBarAdmin ul li a:hover {
+    background-color: #9e9e9e5d;
+}
+
+.navBarHover {
+    background-color: #9e9e9e5d;
+}
+
+/* event card */
+
+.event-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-card .container {
+    padding: 50px 0;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-card .container h1 {
+    align-self: flex-start;
+    margin-bottom: 50px;
+}
+
+.event-card .container .card {
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.event-card .container .card h2 {
+    margin-bottom: 15px;
+}
+
+.event-card .container .card p {
+    margin-bottom: 25px;
+}
+
+.event-card .container .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* admin */
+
+.admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin h1 {
+    margin-top: 200px;
+    font-size: 30px;
+}
+
+.admin p {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+/* admin form */
+
+.adminForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.adminForm h1 {
+    margin-bottom: 50px;
+}
+
+.adminForm .container {
+    display: flex;
+    justify-content: center;
+}
+
+.adminForm form div {
+    display: flex;
+    align-items: center;
+    margin: 30px 20px;
+}
+
+.adminForm form div ul li {
+    color: red;
+    background-color: rgba(255, 0, 0, 0.182);
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    max-width: 150px;
+    margin-left: 15px;
+}
+
+.adminForm label {
+    width: 250px;
+    display: block;
+    font-size: 20px;
+}
+
+.adminForm input,
+.adminForm select {
+    width: 250px;
+    padding: 10px 20px;
+}
+
+.adminForm input[type="date"] {
+    text-align: center;
+}
+
+.adminForm button {
+    display: block;
+    margin: 50px auto 0;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    background-color: #9e9e9e5d;
+}
+
+.adminForm button:hover {
+    background-color: #9e9e9e1f;
+}
+
+.vich-image img {
+    width: 50px;
+}
+
+.vich-image {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.adminForm div.vich-image div label {
+    margin: 0;
+}
+
+
+.adminForm div.divVich {
+    display: flex;
+    align-items: flex-start;
+}
+
+.adminForm div.divVich label {
+    margin-top: 30px;
+}
+
+/* content admin */
+
+.adminContentCard .content {
+    margin-top: 50px;
+}
+
+.adminContentCard .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.adminContentCard .content figure {
+    display: flex;
+    background-color: #FFF;
+    width: 500px;
+    height: 150px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.adminContentCard .content figure img {
+    width: 200px;
+    object-fit: cover;
+}
+
+.adminContentCard .content figure figcaption {
+    padding: 10px;
+}
+
+.adminContentCard .content figure figcaption h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.adminContentCard .content figure figcaption p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.adminContentCard .content .containerContentCard {
+    display: flex;
+    justify-content: center;
+}
+
+.adminContentCard .content .containerContentCard .icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.adminContentCard .content .containerContentCard .icons a {
+    margin: 20px;
+}
+
+.containerContentArray {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 50px;
+}
+
+.containerContentArray:nth-of-type(2n+2) {
+    background-color: #FFF;
+}
+
+.containerContentArray .row {
+    display: flex;
+}
+
+.containerContentArray .row h3 {
+    width: 230px;
+}
+
+.containerContentArray .row p {
+    width: 130px;
+    text-align: center;
+}
+
+.containerContentArray .icons img {
+    margin: 0 10px;
+}
+
+.noElement {
+    margin: 50px;
+    text-align: center;
+}
+
+/* filter admin */
+
+.adminContentCard .filter {
+    display: flex;
+    align-items: flex-end;
+}
+
+.adminContentCard .filter .icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: fit-content;
+    margin-right: 50px;
+}
+
+.adminContentCard .filter form {
+    display: flex;
+    align-items: flex-end;
+}
+
+.adminContentCard .filter form div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.adminContentCard .filter form label {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.adminContentCard .filter form select {
+    width: 150px;
+    height: 30px;
+    text-align: center;
+}
+
+.adminContentCard .filter form button {
+    padding: 0 20px;
+    height: 30px;
+}
+
+/* array ranking */
+
+.arrayRanking {
+    display: flex;
+    justify-content: center;
+}
+
+.arrayRanking .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding-bottom: 50px;
+}
+
+.arrayRanking .container h2 {
+    margin-bottom: 50px;
+    align-self: flex-start;
+}
+
+.arrayRanking .container table {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.arrayRanking .container table tr {
+    height: 50px;
+    text-align: center;
+}
+
+.arrayRanking .container table tr:nth-of-type(2n+2) {
+    background-color: rgba(220, 20, 60, 0.174);
+}
+
+.returnBox {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.returnBox img {
+    position: relative;
+    top: 8px;
+    margin-right: 10px;
 }

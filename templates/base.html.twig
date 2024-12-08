@@ -10,9 +10,12 @@
 		<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"> {% block stylesheets %}{% endblock %}{% block javascripts %}{% endblock %}
 		</head>
 		<body>
-			<header></header>
+			<header>
+				{% block header %}{% endblock %}
+			</header>
 			<main>
 				{% block main %}{% endblock %}
 			</main>
+			<script type="module" src="{{ asset('assets/js/main.js') }}"></script>
 		</body>
 	</html>

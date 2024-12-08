@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+
+{% block header %}
+	{% include "home/layouts/navBar.html.twig" %}
+{% endblock %}
+
+{% block main %}
+	<div class="returnBox">
+		<a href="{{ path("app_home_category", {'category': category}) }}">
+			<img src="{{ asset('assets/icons/retourner.svg') }}" alt="">
+			retourner au menu
+		</a>
+	</div>
+	<section class="arrayRanking">
+		<div class="container">
+			<table>
+				<thead>
+					<th>Date</th>
+					<th>Épreuve</th>
+				</thead>
+				<tbody>
+					{% for event in arrayEvent %}
+						<tr>
+							<th>Du
+								{{ event.startDate }}
+								au
+								{{ event.endDate }}</th>
+							<td>{{ event.name }}</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</section>
+{% endblock %}

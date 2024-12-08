@@ -1,0 +1,26 @@
+<nav class="navBarAdmin">
+	<ul>
+		<li>
+			{% if pathInfo == "/admin/event" %}
+				<a class="navBarHover" href="{{ path('app_admin_entity', {'entity': 'event'}) }}">Calendriers</a>
+			{% else %}
+				<a href="{{ path('app_admin_entity', {'entity': 'event'}) }}">Calendriers</a>
+			{% endif %}
+
+		</li>
+		<li>
+			{% if pathInfo == "/admin/pilot" %}
+				<a class="navBarHover" href="{{ path('app_admin_entity', {'entity': 'pilot'}) }}">Pilote</a>
+			{% else %}
+				<a href="{{ path('app_admin_entity', {'entity': 'pilot'}) }}">Pilote</a>
+			{% endif %}
+		</li>
+		<li>
+			{% if pathInfo == "/admin/constructor" %}
+				<a class="navBarHover" href="{{ path('app_admin_entity', {'entity': 'constructor'}) }}">Contructeur</a>
+			{% else %}
+				<a href="{{ path('app_admin_entity', {'entity': 'constructor'}) }}">Contructeur</a>
+			{% endif %}
+		</li>
+	</ul>
+</nav>

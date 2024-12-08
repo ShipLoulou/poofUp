@@ -1,0 +1,16 @@
+<nav class="{{"navBarHome #{category}BackgroundColor0175"}}">
+	<div class="{{"containerImg #{category}BackgroundColor0175"}}">
+		<img src="{{ asset("assets/images/logos/#{category}.png") }}" alt="{{ category }}">
+	</div>
+	<ul class="containerWrapper closedMenu">
+		{% for item in categories %}
+			{% if item.nameUrl != category %}
+				<li>
+					<a href="{{ path("app_home_category", {"category": item.nameUrl}) }}">
+						<img src="{{ asset("assets/images/logos/#{item.nameUrl}.png") }}" alt="{{ item.name }}">
+					</a>
+				</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+</nav>

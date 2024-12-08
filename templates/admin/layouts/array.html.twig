@@ -1,0 +1,28 @@
+<section class="adminContentCard">
+	<div class="container">
+		{% include "admin/layouts/filter.html.twig" %}
+		<div class="content">
+			{% if items == [] %}
+				<p class="noElement">Aucun élément ne correspond à votre recherche</p>
+			{% else %}
+				{% for item in items %}
+					<div class="containerContentArray">
+						<div class="row">
+							<h3>{{ item.fullName }}</h3>
+							<p>{{ item.categoryToString }}</p>
+							<p>{{ item.currentSeasonToString }}</p>
+						</div>
+						<div class="icons">
+							<a href="{{ path('app_admin_entity', {'entity': entity,'id': item.id }) }}">
+								<img src="{{ asset('assets/icons/editer.svg') }}" alt="">
+							</a>
+							<a href="{{ path('app_admin_delete', {'entity': entity,'id': item.id }) }}" onclick="return confirm('Êtes-vous sur de vouloir supprimer ce pilote ?')">
+								<img src="{{ asset('assets/icons/supprimer.svg') }}" alt="">
+							</a>
+						</div>
+					</div>
+				{% endfor %}
+			{% endif %}
+		</div>
+	</div>
+</section>

@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block header %}
+	{% include "home/layouts/navBar.html.twig" %}
+{% endblock %}
+
+{% block main %}
+	{% include "home/layouts/event-card.html.twig" %}
+	{% if arrayPilots %}
+		{% include "home/layouts/pilot-arrayRanking.html.twig" %}
+	{% endif %}
+	{% if arrayConstructors %}
+		{% include "home/layouts/constructor-arrayRanking.html.twig" %}
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,27 @@
+<section class="event-card">
+	<div class="container">
+		<h1>Prochain évènement</h1>
+		{% if event %}
+			<div class="card">
+				<h2>{{ event.name }}</h2>
+				{% if event.startDateToString and event.endDateToString %}
+					<p>Du
+						{{ event.startDateToString }}
+						au
+						{{ event.endDateToString }}</p>
+				{% else %}
+					<p>Course le
+						{{ event.raceDateToString }}</p>
+				{% endif %}
+
+				<img src="{{ vich_uploader_asset(event, 'imageFile') }}" alt="{{ event.name }}">
+			</div>
+			<a href="{{ path('app_event', {'category': category }) }}" class="{{"btn-link #{category}BackgroundColor1"}}">Voir le calendier</a>
+		{% else %}
+			<div class="card">
+				<h2>Pas d'évènement à venir pour le moment</h2>
+			</div>
+			<a href="#" class="{{"btn-link #{category}BackgroundColor1"}}">Voir le calendier</a>
+		{% endif %}
+	</div>
+</section>

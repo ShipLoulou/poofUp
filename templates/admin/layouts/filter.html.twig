@@ -1,0 +1,39 @@
+<div class="filter">
+	<div class="icon">
+		<img src="{{ asset('assets/icons/filtre-horizontal.svg') }}" alt="">
+		<p>Filtre</p>
+	</div>
+	<form method="post">
+		<div>
+			<label for="filterCategory">Catégorie</label>
+			<select name="filterCategory" id="filterCategory">
+				<option value="">Tous</option>
+				{% for category in categories %}
+					<option value="{{ category.nameUrl }}">{{ category.name }}</option>
+				{% endfor %}
+			</select>
+		</div>
+		<div>
+			<label for="filterYears">Année</label>
+			<select name="filterYears" id="filterYears">
+				<option value="">Tous</option>
+				{% for season in seasons %}
+					<option value="{{ season.years }}">{{ season.years }}</option>
+				{% endfor %}
+			</select>
+		</div>
+		<div>
+			<label for="filterSort">Trié par</label>
+			<select name="filterSort" id="filterSort">
+				<option value="">Ajout</option>
+				{% if pathInfo == "/admin/event" %}
+					<option value="Date">Date</option>
+				{% endif %}
+				{% if pathInfo == "/admin/pilot" or pathInfo == "/admin/constructor" %}
+					<option value="fullname">Fullname</option>
+				{% endif %}
+			</select>
+		</div>
+		<button>Valider</button>
+	</form>
+</div>
